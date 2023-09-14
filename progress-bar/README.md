@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-Task is to create a progress bar component using ReactJS
+Task was to create a progress bar component using ReactJS
+
+CodeSandbox Live link -> [Progress Bar](https://lvslps.csb.app/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
