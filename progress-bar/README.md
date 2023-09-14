@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Task is to create a progress bar component using ReactJS
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
