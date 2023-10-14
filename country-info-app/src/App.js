@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     debouncedSearch(searchTerm);
-  }, [searchTerm]);
+  }, [searchTerm, debouncedSearch]);
 
   const fetchCountries = async (query) => {
     try {
