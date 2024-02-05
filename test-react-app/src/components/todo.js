@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
-const todo = ({todo}) => {
-  return (
-    <div data-testid="todo-1">
-      Hello World
-    </div>
-  )
-}
+const todo = ({ todo }) => {
+  const { id, title, completed } = todo;
+  const h1 = <h1>{title}</h1>;
+  const text = completed ? <strike>{h1}</strike> : h1;
+  return <div data-testid={`todo-${id}`}>{text}</div>;
+};
 
-export default todo
+export default todo;
