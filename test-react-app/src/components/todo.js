@@ -1,8 +1,8 @@
 import React from 'react'
 
-const todo = () => {
+const todo = ({todo}) => {
   return (
-    <div>
+    <div data-testid="todo-1">
       Hello World
     </div>
   )
