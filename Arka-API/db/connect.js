@@ -1,14 +1,21 @@
 const mongoose = require('mongoose');
 const { options } = require('../routes/products');
 
-uri = "mongodb+srv://arkadiptamojumder14:vav3qDapxkMDLc0w@cluster0.mnc8hdp.mongodb.net/Cluster0?retryWrites=true&w=majority"
 
-const connectDB = () => {
-    console.log('Connecting to the desired database')
-    return mongoose.connect(uri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    });
+
+const connectDB = async(uri) => {
+    try {
+        const conn = await mongoose.connect(uri, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false,
+            useCreateIndex: true
+        });
+        console.log(`MongoDB connected: ${conn.connection.host}`);
+    } catch (error) {
+        console.error(`Error: ', ${error}`);
+        process.exit(1);
+    }
 }
 
 module.exports = connectDB;
