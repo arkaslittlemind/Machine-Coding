@@ -4,10 +4,10 @@ require('dotenv').config({ path: './config.env' });
 const express = require('express');
 const app = express();
 
-const connectDB = require('./db/connect');
+//const connectDB = require('./db/connect');
 
 const PORT = process.env.PORT || 5000;
-const mode = process.env.NODE_ENV;
+//const mode = process.env.NODE_ENV;
 
 const products_routes = require('./routes/products');
 
